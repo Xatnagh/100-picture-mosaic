@@ -14,21 +14,18 @@ class ImageInfomations(ndb.Model):
     url= ndb.StringProperty(required=True)
 class Home(webapp2.RequestHandler):
     def get(self):
-        homepage = the_jinja_env.get_template('test.html')
+        homepage = the_jinja_env.get_template('home/home.html')
         Q = ImageInfomations.query().fetch()
 
         self.response.write(homepage.render({"Q": Q }))
 class AddImage(webapp2.RequestHandler):
-    def post(self):
+    def get(self):
         homepage = the_jinja_env.get_template('/addImage/addImage.html')
-        id = self.request.get('location')
-        image_url= self.request.get('image_url')
-        url= self.request.get('url')
-
-        ImageInfomations(image_url=image_url, url=url).put()
-
-        dict= {'url':url, 'image_url':image_url}
-        self.response.write(homepage.render(dict))
+        #id = self.request.get('location')
+        #image_url= self.request.get('image_url')
+        #url= self.request.get('url')
+        #ImageInfomations(image_url=image_url, url=url).put()
+        self.response.write(homepage.render())
 app = webapp2.WSGIApplication([
 ('/',Home),
 ('/addImage',AddImage)
