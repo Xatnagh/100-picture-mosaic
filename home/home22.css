@@ -1,0 +1,59 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+nav{
+    width:100%;
+    background: #262626;
+    /* overflow: hidden;
+    position: fixed;
+    top:0; */
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+a{
+    padding: 20px;
+    width: 100px;
+    display: block;
+    text-decoration: none;
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.container {
+display grid;
+width: 1000px;
+height: 1000px;
+grid-template-columns: 1000px 1000px;
+border: 2px solid red;
+display: flex;
+flex-wrap: wrap;
+}
+.button{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#a1 {
+  background-image: url(http://assets-news-bcdn-ll.dailyhunt.in/cmd/resize/400x400_60/fetchdata13/images/c4/15/9e/c4159ea071b3f080970b52f0c4eed726.jpg);
+}
+#a2 {
+  background-image: url(http://assets-news-bcdn-ll.dailyhunt.in/cmd/resize/400x400_60/fetchdata13/images/c4/15/9e/c4159ea071b3f080970b52f0c4eed726.jpg);
+}
+#b1 {
+  background-image: url(http://assets-news-bcdn-ll.dailyhunt.in/cmd/resize/400x400_60/fetchdata13/images/c4/15/9e/c4159ea071b3f080970b52f0c4eed726.jpg);
+}
+#b2 {
+  background-image: url(http://assets-news-bcdn-ll.dailyhunt.in/cmd/resize/400x400_60/fetchdata13/images/c4/15/9e/c4159ea071b3f080970b52f0c4eed726.jpg);
+}
