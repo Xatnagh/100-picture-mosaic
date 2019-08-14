@@ -1,3 +1,4 @@
+
 html{
     scroll-behavior: smooth;
 }
@@ -30,6 +31,7 @@ a{
 }
 
 .container {
+margin:40px;
 display grid;
 width: 1000px;
 height: 1000px;
@@ -44,7 +46,14 @@ flex-wrap: wrap;
   display: flex;
   flex-wrap: wrap;
 }
+#addimagebtn{
+  padding:10px;
+  font-style: italic;
+  font-size: 20px;
+  width: auto;
+  height: auto;
 
+}
 #a1 {
   background-image: url(http://assets-news-bcdn-ll.dailyhunt.in/cmd/resize/400x400_60/fetchdata13/images/c4/15/9e/c4159ea071b3f080970b52f0c4eed726.jpg);
 }
@@ -57,3 +66,4 @@ flex-wrap: wrap;
 #b2 {
   background-image: url(http://assets-news-bcdn-ll.dailyhunt.in/cmd/resize/400x400_60/fetchdata13/images/c4/15/9e/c4159ea071b3f080970b52f0c4eed726.jpg);
 }
+
