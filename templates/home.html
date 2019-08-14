@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/home22.css">
   </head>
   <body>
-        {{imagehere}}
+       
     <nav>
       <ul>
         <li><a href ="#section1">Home</a></li>
@@ -18,14 +18,18 @@
     <div id="section1">
     </div>
     <div class="section2">
+<center>
       <div class="container">
       {%for i in images%}
-      <a class="images" id={{i.id}} href={{i.url}}>
-      <img src={{i.image_url}} alt="image did not load">
+      
+      <a id={{i.location}} href={{i.url}}>
+      <img src={{i.image_url}} alt="image did not load" class="images" >
       
       </a>
       {% endfor %}
+
       </div>
+</center>
     </div>
     <button onclick="window.location.href = 'http://localhost:8080/addImage';" id="addimagebtn">Click Here to add your own image</button>
     <div class="section2">
