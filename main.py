@@ -11,17 +11,10 @@ extensions=['jinja2.ext.autoescape'],autoescape=True)
 
 
 def GetImages():
-    return ImageInfo.query().fetch()
-
-def getImages(mosaic_location):
-    imageURL = ImageInfo.query(ImageInfo.location==mosaic_location).get().image_url
-    websiteUrl=ImageInfo.query(ImageInfo.location==mosaic_location).get().url
-
-    images={'imageUrl':imageURL,'websiteUrl':websiteUrl}
-    return images
-
+    return ImageInfo.query().order(ImageInfo.location).fetch()
 class Home(webapp2.RequestHandler):
     def get(self):
+        defaultdatas()
         homepage = the_jinja_env.get_template('/templates/home.html')
         self.response.write(homepage.render({"images":GetImages()}))
        
@@ -32,15 +25,18 @@ class AddImage(webapp2.RequestHandler):
     def get(self):
         homepage = the_jinja_env.get_template('/templates/addImage.html')
         self.response.write(homepage.render())
-        location = self.request.get('location')
-    def post(self):   
+       
+    def post(self): 
+        location = int(self.request.get('location'))
         imageurl= self.request.get('image_url')
-        URL= self.request.get('url')
+        URL= self.request.get('website_url')
         print location
         newImage=ImageInfo.query(ImageInfo.location==location).get()
         newImage.image_url=imageurl
         newImage.url=URL
         newImage.put()
+        homepage = the_jinja_env.get_template('/templates/home.html')
+        self.response.write(homepage.render({"images":GetImages()}))
         
 class AboutHandler(webapp2.RequestHandler):
     def get(self):
