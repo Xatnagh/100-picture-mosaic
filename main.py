@@ -42,11 +42,16 @@ class AddImage(webapp2.RequestHandler):
         newImage.url=URL
         newImage.put()
         
-        
-       
+class AboutHandler(webapp2.RequestHandler):
+    def get(self):
+        t = the_jinga_env.get_template('templates/about.html')
+        self.response.write(t.render())       
+
+
 app = webapp2.WSGIApplication([
 ('/',Home),
 ('/addImage',AddImage),
-('/load', loadImages)
+('/load', loadImages),
+('/about', AboutHandler),
 ], debug=True)
 
