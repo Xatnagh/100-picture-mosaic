@@ -1,13 +1,16 @@
-
+body{
+background-color: red;
+}
 nav{
   width: 100%;
   height: 60px;
-  background-image:url(https://i.redd.it/3t88melm5eb01.jpg)
+  
+  background-color: white;
 }
 
 nav p {
   font-family: arial;
-  color: white;
+  color: black;
   font-size: 24px;
   line-height: 25px;
   float: left;
@@ -27,7 +30,7 @@ nav ul li {
 nav ul li a {
   display: block;
   font-family: arial;
-  color:White;
+  color:black;
   font-size: 20px;
   padding: 22px 14px;
   text-decoration: none;
@@ -36,7 +39,7 @@ nav ul li a {
 nav ul li ul {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: black;
   padding: 10px;
   border-radius: 0px 0px 4px 4px;
 }
@@ -55,19 +58,22 @@ nav ul li ul li a:hover {
 }
 .container {
 
-  margin:30px;
+  margin-top:30px;
   display: grid;
-  width: 1000px;
+  width: 100%; 
   height: 1000px;
-  grid-template-columns: 1000px 1000px;
-  border: 2px solid red;
-  display: flex;
-  flex-wrap: wrap;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  border: 2px solid blue;
+ 
+   flex-wrap: wrap; 
   }
+
   .images{
-   width: 100px;
-   height: 100px;
-   display:flex;
+  width: 100%;
+  height: 100%;
+  display:flex;
+ 
   }
 
 #addimagebtn{
