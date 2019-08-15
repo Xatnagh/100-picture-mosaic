@@ -1,71 +1,79 @@
 
-html{
-    scroll-behavior: smooth;
-}
-body{
-    margin: 0;
-    padding: 0;
-    font-family: Arial;
-
-}
 nav{
-    width:100%;
-    background: #262626;
-    /* overflow: hidden;
-    position: fixed;
-    top:0; */
-}
-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-}
-a img{
-    padding: 20px;
-    width: 100px;
-    display: block;
-    text-decoration: none;
-    color:#fff;
-    text-transform: uppercase;
-    font-weight: bold;
+  width: 100%;
+  height: 60px;
+  background-image:url(https://i.redd.it/3t88melm5eb01.jpg)
 }
 
+nav p {
+  font-family: arial;
+  color: white;
+  font-size: 24px;
+  line-height: 25px;
+  float: left;
+  padding: 0px 20px;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li {
+  float: right;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  font-family: arial;
+  color:White;
+  font-size: 20px;
+  padding: 22px 14px;
+  text-decoration: none;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 180px;
+  border-radius: 4px;
+}
+
+nav ul li ul li a:hover {
+  background-color: #df3131;
+}
 .container {
 
-margin:40px;
-display: grid;
-width: 1000px;
-height: 1000px;
-grid-template-columns: 1000px 1000px;
-border: 2px solid red;
-display: flex;
-flex-wrap: wrap;
-}
-.images{
-  width: 100px;
-  height: 100px;
-  padding: 0px;
-  margin: 0px;
-}
+  margin:30px;
+  display: grid;
+  width: 1000px;
+  height: 1000px;
+  grid-template-columns: 1000px 1000px;
+  border: 2px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  }
+  .images{
+   width: 100px;
+   height: 100px;
+   display:flex;
+  }
+
 #addimagebtn{
   padding:10px;
   font-style: italic;
   font-size: 20px;
   width: auto;
   height: auto;
-
 }
-#a1 {
-  background-image: url(http://assets-news-bcdn-ll.dailyhunt.in/cmd/resize/400x400_60/fetchdata13/images/c4/15/9e/c4159ea071b3f080970b52f0c4eed726.jpg);
-}
-#a2 {
-  background-image: url(http://assets-news-bcdn-ll.dailyhunt.in/cmd/resize/400x400_60/fetchdata13/images/c4/15/9e/c4159ea071b3f080970b52f0c4eed726.jpg);
-}
-#b1 {
-  background-image: url(http://assets-news-bcdn-ll.dailyhunt.in/cmd/resize/400x400_60/fetchdata13/images/c4/15/9e/c4159ea071b3f080970b52f0c4eed726.jpg);
-}
-#b2 {
-  background-image: url(http://assets-news-bcdn-ll.dailyhunt.in/cmd/resize/400x400_60/fetchdata13/images/c4/15/9e/c4159ea071b3f080970b52f0c4eed726.jpg);
-}
-
