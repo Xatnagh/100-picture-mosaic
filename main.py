@@ -43,11 +43,15 @@ class AboutHandler(webapp2.RequestHandler):
         t = the_jinga_env.get_template('templates/about.html')
         self.response.write(t.render())       
 
-
+class Contact(webapp2.RequestHandler):
+    def get(self):
+        t = the_jinja_env.get_template('templates/contact.html')
+        self.response.write(t.render())   
 app = webapp2.WSGIApplication([
 ('/',Home),
 ('/addImage',AddImage),
 ('/load', loadImages),
 ('/about', AboutHandler),
+('/contact',Contact)
 ], debug=True)
 

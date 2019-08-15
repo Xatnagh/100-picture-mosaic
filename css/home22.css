@@ -1,5 +1,5 @@
 body{
-background-color: red;
+  margin:0px;
 }
 nav{
   width: 100%;
@@ -12,7 +12,7 @@ nav p {
   font-family: arial;
   color: black;
   font-size: 24px;
-  line-height: 25px;
+  line-height: 20px;
   float: left;
   padding: 0px 20px;
 }
@@ -57,26 +57,25 @@ nav ul li ul li a:hover {
   background-color: #df3131;
 }
 .container {
-
-  margin-top:30px;
+  background-color: lightgray;
+  margin-top:15px;
   display: grid;
   width: 100%; 
   height: 1000px;
   grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   border: 2px solid blue;
- 
-   flex-wrap: wrap; 
+  flex-wrap: wrap; 
   }
 
   .images{
   width: 100%;
   height: 100%;
   display:flex;
- 
   }
 
 #addimagebtn{
+  margin:10px;
   padding:10px;
   font-style: italic;
   font-size: 20px;
