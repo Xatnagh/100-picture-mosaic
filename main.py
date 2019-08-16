@@ -21,6 +21,10 @@ class Home(webapp2.RequestHandler):
 class loadImages(webapp2.RequestHandler):
     def get(self):
         defaultdatas()
+class LoginPage(webapp2.RequestHandler):
+    def get(self):
+        homepage = the_jinja_env.get_template('/templates/login.html')
+        self.response.write(homepage.render())
 class AddImage(webapp2.RequestHandler):
     def get(self):
         homepage = the_jinja_env.get_template('/templates/addImage.html')
@@ -37,11 +41,6 @@ class AddImage(webapp2.RequestHandler):
         newImage.put()
         homepage = the_jinja_env.get_template('/templates/home.html')
         self.response.write(homepage.render({"images":GetImages()}))
-        
-class AboutHandler(webapp2.RequestHandler):
-    def get(self):
-        t = the_jinga_env.get_template('templates/about.html')
-        self.response.write(t.render())       
 
 class Contact(webapp2.RequestHandler):
     def get(self):
@@ -51,7 +50,7 @@ app = webapp2.WSGIApplication([
 ('/',Home),
 ('/addImage',AddImage),
 ('/load', loadImages),
-('/about', AboutHandler),
-('/contact',Contact)
+('/contact',Contact),
+('/login',LoginPage)
 ], debug=True)
 
