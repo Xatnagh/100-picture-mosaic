@@ -25,6 +25,7 @@ class LoginPage(webapp2.RequestHandler):
     def get(self):
         homepage = the_jinja_env.get_template('/templates/login.html')
         self.response.write(homepage.render())
+
 class AddImage(webapp2.RequestHandler):
     def get(self):
         homepage = the_jinja_env.get_template('/templates/addImage.html')
