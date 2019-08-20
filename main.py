@@ -21,18 +21,19 @@ class Home(webapp2.RequestHandler):
 class loadImages(webapp2.RequestHandler):
     def get(self):
         defaultdatas()
+
 class LoginPage(webapp2.RequestHandler):
     def get(self):
         homepage = the_jinja_env.get_template('/templates/login.html')
         self.response.write(homepage.render())
+        print('get request completed')
 
     def post(self):
-
-
+        print('starting authentication')
         try:
             from flask import request
-            #retreve token
-            token = request.form["id_token"]
+            # retreve token
+            token = request.text["id_token"]
             from google.oauth2 import id_token
             from google.auth.transport import requests
             # Specify the CLIENT_ID of the app that accesses the backend:
@@ -51,10 +52,13 @@ class LoginPage(webapp2.RequestHandler):
             #     raise ValueError('Wrong hosted domain.')
 
             # ID token is valid. Get the user's Google Account ID from the decoded token.
+            # next step send to google database
             userid = idinfo['sub']
+            print(userid)
         except ValueError:
 
             # Invalid token
+            print('login: not working')
             pass
 
 class AddImage(webapp2.RequestHandler):
