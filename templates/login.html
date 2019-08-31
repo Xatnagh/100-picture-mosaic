@@ -72,7 +72,7 @@
             //sending id token to server
 
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'https://8080-dot-8433855-dot-devshell.appspot.com/login');//change to the real website when ready
+            xhr.open('POST', '/login');
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.onload = function() {
             console.log('Signed in as: ' + xhr.responseText);

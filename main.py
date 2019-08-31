@@ -31,11 +31,10 @@ class LoginPage(webapp2.RequestHandler):
     def post(self):
         print('starting authentication')
         try:
-            from flask import request
             # retreve token
-            token = request.text["id_token"]
-            from google.oauth2 import id_token
-            from google.auth.transport import requests
+            token = self.request.get("id_token")
+            from google.oauth2 import id_token          # BROKEN
+            from google.auth.transport import requests  # BROKEN
             # Specify the CLIENT_ID of the app that accesses the backend:
             idinfo = id_token.verify_oauth2_token(token, requests.Request(), CLIENT_ID)
 
